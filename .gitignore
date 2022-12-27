@@ -1,0 +1,5 @@
+build/
+Pods/
+*/xcuserdata/*
+Icon
+.DS_Store

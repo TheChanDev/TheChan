@@ -1,0 +1,27 @@
+
+/* Class = "UILabel"; text = "FILE INFO"; ObjectID = "3CI-qw-NP8"; */
+"3CI-qw-NP8.text" = "ИНФОРМАЦИЯ";
+
+/* Class = "UILabel"; text = "RESOLUTION"; ObjectID = "4nG-5U-6Pn"; */
+"4nG-5U-6Pn.text" = "РАЗРЕШЕНИЕ";
+
+/* Class = "UILabel"; text = "NAME"; ObjectID = "6xQ-h9-3gP"; */
+"6xQ-h9-3gP.text" = "ИМЯ";
+
+/* Class = "UILabel"; text = "SIZE"; ObjectID = "8cj-Fc-df3"; */
+"8cj-Fc-df3.text" = "РАЗМЕР";
+
+/* Class = "UIButton"; normalTitle = "Share"; ObjectID = "Oba-Nm-kkl"; */
+"Oba-Nm-kkl.normalTitle" = "Поделиться";
+
+/* Class = "UILabel"; text = "___"; ObjectID = "QVA-HU-OyY"; */
+"QVA-HU-OyY.text" = "___";
+
+/* Class = "UIButton"; normalTitle = "Search in Google"; ObjectID = "TGd-Qf-uhl"; */
+"TGd-Qf-uhl.normalTitle" = "Искать в Google";
+
+/* Class = "UILabel"; text = "___"; ObjectID = "UD8-5t-7IM"; */
+"UD8-5t-7IM.text" = "___";
+
+/* Class = "UILabel"; text = "___"; ObjectID = "cqr-Bv-vjC"; */
+"cqr-Bv-vjC.text" = "___";

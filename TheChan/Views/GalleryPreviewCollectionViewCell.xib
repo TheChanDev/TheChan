@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="GalleryPreviewCollectionViewCell" customModule="TheChan" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cFa-E2-wbU">
+                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zkv-TR-Z6v">
+                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GIF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCG-ff-Rez">
+                                <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="videoIcon" translatesAutoresizingMaskIntoConstraints="NO" id="A7D-P4-dK3">
+                                <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="NCG-ff-Rez" secondAttribute="bottom" id="Mm3-Ki-Zsa"/>
+                            <constraint firstItem="NCG-ff-Rez" firstAttribute="top" secondItem="zkv-TR-Z6v" secondAttribute="top" id="NyQ-J0-Cft"/>
+                            <constraint firstItem="A7D-P4-dK3" firstAttribute="top" secondItem="zkv-TR-Z6v" secondAttribute="top" id="Rye-c9-nCq"/>
+                            <constraint firstItem="NCG-ff-Rez" firstAttribute="leading" secondItem="zkv-TR-Z6v" secondAttribute="leading" id="agM-3w-rUt"/>
+                            <constraint firstAttribute="bottom" secondItem="A7D-P4-dK3" secondAttribute="bottom" id="bbj-R6-GNd"/>
+                            <constraint firstAttribute="trailing" secondItem="A7D-P4-dK3" secondAttribute="trailing" id="go3-Se-Dq6"/>
+                            <constraint firstAttribute="trailing" secondItem="NCG-ff-Rez" secondAttribute="trailing" id="lpp-Si-qML"/>
+                            <constraint firstItem="A7D-P4-dK3" firstAttribute="leading" secondItem="zkv-TR-Z6v" secondAttribute="leading" id="yYE-ss-oYS"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="zkv-TR-Z6v" secondAttribute="bottom" id="5i6-8F-Ur9"/>
+                <constraint firstItem="cFa-E2-wbU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="DIG-VJ-jyt"/>
+                <constraint firstItem="zkv-TR-Z6v" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="JeK-bT-sNH"/>
+                <constraint firstItem="zkv-TR-Z6v" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Kbe-xM-p81"/>
+                <constraint firstAttribute="trailing" secondItem="cFa-E2-wbU" secondAttribute="trailing" id="Oc7-Pz-CP3"/>
+                <constraint firstItem="cFa-E2-wbU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="UiY-IP-MUy"/>
+                <constraint firstAttribute="bottom" secondItem="cFa-E2-wbU" secondAttribute="bottom" id="jwU-T9-urR"/>
+                <constraint firstAttribute="trailing" secondItem="zkv-TR-Z6v" secondAttribute="trailing" id="jxn-gF-wer"/>
+            </constraints>
+            <connections>
+                <outlet property="gifTypeInfoView" destination="NCG-ff-Rez" id="kwE-Gp-gm9"/>
+                <outlet property="imageView" destination="cFa-E2-wbU" id="T6h-Ok-7xE"/>
+                <outlet property="typeInfoView" destination="zkv-TR-Z6v" id="Tys-by-ZYs"/>
+                <outlet property="videoTypeInfoView" destination="A7D-P4-dK3" id="uqK-hm-odf"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="videoIcon" width="25" height="25"/>
+    </resources>
+</document>

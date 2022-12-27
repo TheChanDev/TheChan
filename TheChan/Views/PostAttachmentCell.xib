@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="4gG-oM-t6x" customClass="PostAttachmentCell" customModule="TheChan" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Aej-gE-Jhf">
+                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="videoIcon" translatesAutoresizingMaskIntoConstraints="NO" id="ofk-63-qjv">
+                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ofk-63-qjv" secondAttribute="trailing" id="0sA-hs-OqJ"/>
+                <constraint firstItem="ofk-63-qjv" firstAttribute="leading" secondItem="4gG-oM-t6x" secondAttribute="leading" id="8w0-fp-A8M"/>
+                <constraint firstAttribute="bottom" secondItem="Aej-gE-Jhf" secondAttribute="bottom" id="I8V-du-vZt"/>
+                <constraint firstAttribute="trailing" secondItem="Aej-gE-Jhf" secondAttribute="trailing" id="J4h-md-IFQ"/>
+                <constraint firstItem="ofk-63-qjv" firstAttribute="top" secondItem="4gG-oM-t6x" secondAttribute="top" id="bZs-QV-1BL"/>
+                <constraint firstItem="Aej-gE-Jhf" firstAttribute="leading" secondItem="4gG-oM-t6x" secondAttribute="leading" id="fAX-b3-vU0"/>
+                <constraint firstItem="Aej-gE-Jhf" firstAttribute="top" secondItem="4gG-oM-t6x" secondAttribute="top" id="rqd-Vr-pmf"/>
+                <constraint firstAttribute="bottom" secondItem="ofk-63-qjv" secondAttribute="bottom" id="uGc-UZ-SQJ"/>
+            </constraints>
+            <connections>
+                <outlet property="previewImage" destination="Aej-gE-Jhf" id="YuE-RR-ao4"/>
+                <outlet property="videoIcon" destination="ofk-63-qjv" id="N6e-RV-m1k"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="videoIcon" width="25" height="25"/>
+    </resources>
+</document>

@@ -1,0 +1,7 @@
+--header strip
+--stripunusedargs closure-only
+--wraparguments before-first
+--patternlet inline
+--enable organizeDeclarations
+--maxwidth 120
+--wrapternary default

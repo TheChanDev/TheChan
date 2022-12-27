@@ -1,0 +1,30 @@
+
+/* Class = "UITabBarItem"; title = "Boards"; ObjectID = "9Oy-op-xsZ"; */
+"9Oy-op-xsZ.title" = "Доски";
+
+/* Class = "UINavigationItem"; title = "Recents"; ObjectID = "GhT-pz-9nK"; */
+"GhT-pz-9nK.title" = "Последние";
+
+/* Class = "UINavigationItem"; title = "Favorites"; ObjectID = "Lqd-MR-qHd"; */
+"Lqd-MR-qHd.title" = "Избранные";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "XXN-iq-xaL"; */
+"XXN-iq-xaL.placeholder" = "Имя";
+
+/* Class = "UINavigationItem"; title = "Boards"; ObjectID = "kmE-ae-2hV"; */
+"kmE-ae-2hV.title" = "Доски";
+
+/* Class = "UITextField"; placeholder = "Subject"; ObjectID = "qgf-FG-DCf"; */
+"qgf-FG-DCf.placeholder" = "Тема";
+
+/* Class = "UITextField"; placeholder = "Board ID"; ObjectID = "QJj-qx-SrP"; */
+"QJj-qx-SrP.placeholder" = "ID доски";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "fQ2-yQ-bhf"; */
+"fQ2-yQ-bhf.placeholder" = "Название";
+
+"KsP-v9-Ao7.normalTitle" = "Повторить";
+
+"Ajo-q9-Iu9.title" = "Избранные";
+
+"wz1-CF-L2p.title" = "Последние";

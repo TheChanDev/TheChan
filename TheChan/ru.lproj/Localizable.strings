@@ -1,0 +1,59 @@
+/* 
+  Localizable.strings
+  TheChan
+
+  Created by Вадим Новосельцев on 11.11.16.
+  Copyright © 2016 ACEDENED Software. All rights reserved.
+*/
+
+THREAD_LAST_UPDATE="Обновлен в ";
+THREAD_REFRESH_ERROR="Ошибка обновления";
+THREAD_REFRESHING="Обновление";
+UNKNOWN_ERROR="Неизвестная ошибка";
+ERROR="Ошибка";
+POSTING_REPLY_MODE_TITLE="Ответить";
+POSTING_NEW_THREAD_MODE_TITLE="Новый тред";
+BUILD_EXPIRED_TITLE="Сборка устарела";
+BUILD_EXPIRED="Обновитесь до последней версии, чтобы продолжить пользоваться The Chan";
+QUIT="Выйти";
+FAVORITES="Избранные";
+FAVORITE="Добавить в избранное";
+BOARDS_SEARCH_BAR_PLACEHOLDER="Поиск и переход";
+ERASE_HISTORY_TITLE="Очистить историю";
+ERASE_HISTORY="Вы действительно хотите очистить историю?";
+YES="Да";
+NO="Нет";
+REPLY="Ответить";
+QUOTE="Цитировать";
+CANCEL="Отмена";
+SHARE="Поделиться";
+HIDE="Скрыть";
+SHOW="Показать";
+ALL_BOARDS="Все доски";
+MEDIA_ALERT_TITLE="Предупреждение";
+MEDIA_ALERT="Медиа-файлы могут содержать непристойный контент. Нажимая кнопку \"Включить\", вы подтверждаете, что вам исполнилось как минимум 18 лет";
+ENABLE_MEDIA="Включить";
+ENABLE="Включить";
+DISABLE="Выключить";
+THEME_DARK="Темная";
+THEME_LIGHT="Светлая";
+THEME_TOMORROW="Tomorrow";
+THEME_BLACK="Чёрная";
+THEME_CANDY="Candy";
+RESTART_NEEDED="Для применения нужен перезапуск";
+TOOLBAR_REFRESH_BUTTON="Обновить";
+TOOLBAR_GO_DOWN_BUTTON="Вниз";
+TOOLBAR_REPLY_BUTTON="Ответить";
+TOOLBAR_FAVORITE_BUTTON="Добавить в избранное";
+TOOLBAR_INDICATOR="Индикатор";
+FAVORITES_EMPTY_MESSAGE="Здесь пусто.\nВы можете добавлять треды в избранное, чтобы узнавать о новых постах.";
+DELETE="Удалить";
+CUSTOM_BOARDS_TIP="Нажмите сюда, чтобы добавить недостающие доски";
+MARK_MY_POST="Мой пост";
+UNMARK_MY_POST="Не мой пост";
+CATALOG_TITLE="Каталог";
+FONT_SIZE="Размер шрифта";
+CAPTCHA="Капча";
+CAPTCHA_LOAD_ERROR="Ошибка при загрузке капчи";
+CAPTCHA_LOAD_ERROR_WITH_HELP_MESSAGE="Ошибка при загрузке капчи (%@)";
+POSTING_ERROR_COOLDOWN="%@s кулдаун";

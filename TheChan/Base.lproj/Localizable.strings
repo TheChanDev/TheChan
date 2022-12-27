@@ -1,0 +1,60 @@
+/* 
+  Localizable.strings
+  TheChan
+
+  Created by Вадим Новосельцев on 11.11.16.
+  Copyright © 2016 ACEDENED Software. All rights reserved.
+*/
+
+THREAD_LAST_UPDATE="Last updated on ";
+THREAD_REFRESH_ERROR="Refresh error";
+THREAD_REFRESHING="Refreshing";
+UNKNOWN_ERROR="Unknown error";
+ERROR="Error";
+POSTING_REPLY_MODE_TITLE="Reply";
+POSTING_NEW_THREAD_MODE_TITLE="New thread";
+OK="OK";
+BUILD_EXPIRED_TITLE="Build Has Expired";
+BUILD_EXPIRED="Update to the latest version to continue using The Chan";
+QUIT="Quit";
+FAVORITES="Favorites";
+FAVORITE="Favorite";
+BOARDS_SEARCH_BAR_PLACEHOLDER="Search & navigation";
+ERASE_HISTORY_TITLE="Erase History";
+ERASE_HISTORY="Do you really want to erase the history?";
+YES="Yes";
+NO="No";
+REPLY="Reply";
+QUOTE="Quote";
+CANCEL="Cancel";
+SHARE="Share";
+HIDE="Hide";
+SHOW="Show";
+ALL_BOARDS="All boards";
+MEDIA_ALERT_TITLE="Warning";
+MEDIA_ALERT="Media files may have content that isn't suitable for everyone or NSFW. By pressing \"Enable\" you confirm that you are at least 18 years old.";
+ENABLE_MEDIA="Enable";
+ENABLE="Enable";
+DISABLE="Disable";
+THEME_DARK="Dark";
+THEME_LIGHT="Light";
+THEME_TOMORROW="Tomorrow";
+THEME_BLACK="Black";
+THEME_CANDY="Candy";
+RESTART_NEEDED="Changes will be applied after restart";
+TOOLBAR_REFRESH_BUTTON="Refresh";
+TOOLBAR_GO_DOWN_BUTTON="Scroll to bottom";
+TOOLBAR_REPLY_BUTTON="Reply";
+TOOLBAR_FAVORITE_BUTTON="Favorite";
+TOOLBAR_INDICATOR="Indicator";
+FAVORITES_EMPTY_MESSAGE="Nothing here.\nYou can add threads to favorites to be aware of new posts.";
+DELETE="Delete";
+CUSTOM_BOARDS_TIP="Tap here to add missing boards";
+MARK_MY_POST="My post";
+UNMARK_MY_POST="Not my post";
+CATALOG_TITLE="Catalog";
+FONT_SIZE="Font Size";
+CAPTCHA="Captcha";
+CAPTCHA_LOAD_ERROR="Unable to load captcha";
+CAPTCHA_LOAD_ERROR_WITH_HELP_MESSAGE="Unable to load captcha (%@)";
+POSTING_ERROR_COOLDOWN="%@s cooldown";

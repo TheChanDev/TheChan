@@ -1,0 +1,11 @@
+/* 
+  InfoPlist.strings
+  TheChan
+
+  Created by Вадим Новосельцев on 13/01/2017.
+  Copyright © 2017 ACEDENED Software. All rights reserved.
+*/
+
+favoritesTitle="Избранное";
+NSPhotoLibraryUsageDescription="Нам нужен доступ к вашей библиотеке, чтобы иметь возможность прикреплять файлы";
+NSPhotoLibraryAddUsageDescription="Разрешите доступ для возможности сохранять изображения";

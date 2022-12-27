@@ -1,0 +1,107 @@
+
+/* Class = "UILabel"; text = "Posting Without Captcha"; ObjectID = "2jB-Of-7Uq"; */
+"2jB-Of-7Uq.text" = "Постинг без капчи";
+
+/* Class = "UILabel"; text = "Modules"; ObjectID = "2nt-qO-F5w"; */
+"2nt-qO-F5w.text" = "Модули";
+
+/* Class = "UITableViewSection"; headerTitle = "Behavior"; ObjectID = "McB-j3-DAw"; */
+"McB-j3-DAw.headerTitle" = "Поведение";
+
+/* Class = "UITabBarItem"; title = "Preferences"; ObjectID = "PSs-9K-DVb"; */
+"PSs-9K-DVb.title" = "Настройки";
+
+/* Class = "UITableViewSection"; headerTitle = "Look & feel"; ObjectID = "Rqq-bQ-hro"; */
+"Rqq-bQ-hro.headerTitle" = "Внешний вид";
+
+/* Class = "UINavigationItem"; title = "Font"; ObjectID = "THW-Na-0i4"; */
+"THW-Na-0i4.title" = "Шрифт";
+
+/* Class = "UILabel"; text = "Font"; ObjectID = "TKQ-iS-UHg"; */
+"TKQ-iS-UHg.text" = "Шрифт";
+
+/* Class = "UINavigationItem"; title = "Preferences"; ObjectID = "zg9-rN-zzx"; */
+"zg9-rN-zzx.title" = "Настройки";
+
+/* Class = "UILabel"; text = "About"; ObjectID = "MLr-l7-M4q"; */
+"MLr-l7-M4q.text" = "О приложении";
+
+/* Class = "UINavigationItem"; title = "About"; ObjectID = "Sf3-xh-ZYs"; */
+"Sf3-xh-ZYs.title" = "О приложении";
+
+/* Class = "UITableViewSection"; headerTitle = "Additional"; ObjectID = "ogQ-zF-dUc"; */
+"ogQ-zF-dUc.headerTitle" = "Дополнительно";
+
+/* Class = "UINavigationItem"; title = "Cache"; ObjectID = "BjT-mb-Cdd"; */
+"BjT-mb-Cdd.title" = "Кэш";
+
+/* Class = "UITableViewSection"; headerTitle = "Size taken"; ObjectID = "CVq-ds-S2Z"; */
+"CVq-ds-S2Z.headerTitle" = "Занятое место";
+
+/* Class = "UILabel"; text = "Images"; ObjectID = "MMc-jz-Iuj"; */
+"MMc-jz-Iuj.text" = "Изображения";
+
+/* Class = "UIButton"; normalTitle = "Clear cache"; ObjectID = "OyY-Dl-PsK"; */
+"OyY-Dl-PsK.normalTitle" = "Очистить кэш";
+
+/* Class = "UILabel"; text = "Cache"; ObjectID = "Usi-Fq-Wau"; */
+"Usi-Fq-Wau.text" = "Кэш";
+
+/* Class = "UILabel"; text = "Enable media"; ObjectID = "VIi-oN-rmc"; */
+"VIi-oN-rmc.text" = "Включить медиа-файлы";
+
+/* Class = "UILabel"; text = "Media"; ObjectID = "Zr7-Wu-tY9"; */
+"Zr7-Wu-tY9.text" = "Медиа";
+
+/* Class = "UINavigationItem"; title = "Media"; ObjectID = "xga-aJ-TPg"; */
+"xga-aJ-TPg.title" = "Медиа";
+
+/* Class = "UINavigationItem"; title = "Modules"; ObjectID = "58P-9x-nCS"; */
+"58P-9x-nCS.title" = "Модули";
+
+/* Class = "UILabel"; text = "Theme"; ObjectID = "XFv-L0-Fpe"; */
+"XFv-L0-Fpe.text" = "Тема";
+
+/* Class = "UINavigationItem"; title = "Theme"; ObjectID = "eMQ-4g-ulU"; */
+"eMQ-4g-ulU.title" = "Тема";
+
+/* Class = "UINavigationItem"; title = "Bottom Bar"; ObjectID = "4qt-7I-tvi"; */
+"4qt-7I-tvi.title" = "Нижняя панель";
+
+/* Class = "UILabel"; text = "Bottom Bar"; ObjectID = "ETA-0E-Smp"; */
+"ETA-0E-Smp.text" = "Нижняя панель";
+
+/* Class = "UILabel"; text = "Show videos in gallery"; ObjectID = "Eiq-O8-n1E"; */
+"Eiq-O8-n1E.text" = "Показывать видео в галерее";
+
+/* Class = "UILabel"; text = "Enable mini-gallery"; ObjectID = "W8L-iT-EUX"; */
+"W8L-iT-EUX.text" = "Включить мини-галерею";
+
+/* Class = "UITableViewSection"; footerTitle = "Thread will be automatically scrolled to a post with last opened file after closing the gallery"; ObjectID = "Jbg-HH-9D5"; */
+"Jbg-HH-9D5.footerTitle" = "Тред будет автоматически прокручен к посту с последним открытым файлом после закрытия галереи";
+
+/* Class = "UILabel"; text = "Scroll thread with gallery"; ObjectID = "uPO-Pf-Owf"; */
+"uPO-Pf-Owf.text" = "Прокручивать тред с галереей";
+
+/* Class = "UINavigationItem"; title = "Language"; ObjectID = "Vwq-1c-pg0"; */
+"Vwq-1c-pg0.title" = "Язык";
+
+/* Class = "UILabel"; text = "Language"; ObjectID = "oXJ-2g-fDx"; */
+"oXJ-2g-fDx.text" = "Язык";
+
+/* Class = "UIButton"; normalTitle = "Request a feature"; ObjectID = "RU6-gC-WkV"; */
+"RU6-gC-WkV.normalTitle" = "Запросить функцию";
+
+/* Class = "UIButton"; normalTitle = "Official website"; ObjectID = "U1k-fA-ToJ"; */
+"U1k-fA-ToJ.normalTitle" = "Официальный сайт";
+
+/* Class = "UIButton"; normalTitle = "Contact the developer"; ObjectID = "p7w-MC-hsr"; */
+"p7w-MC-hsr.normalTitle" = "Связаться с разработчиком";
+
+/* Class = "UILabel"; text = "Use monospaced font in post info"; ObjectID = "1BS-vv-nrK"; */
+"1BS-vv-nrK.text" = "Монош. шрифт в заголовках постов";
+
+/* Class = "UILabel"; text = "Videos"; ObjectID = "Mzj-1q-Qcl"; */
+"Mzj-1q-Qcl.text" = "Видео";
+
+"Jio-hS-sLe.text" = "Автоматическая темная тема";

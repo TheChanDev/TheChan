@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>%d replies</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@replies@</string>
+		<key>replies</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>one</key>
+			<string>1 ОТВЕТ</string>
+			<key>other</key>
+			<string>%d ОТВЕТА</string>
+			<key>many</key>
+			<string>%d ОТВЕТОВ</string>
+		</dict>
+	</dict>
+	<key>%d new posts</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@posts@</string>
+		<key>posts</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>zero</key>
+			<string>Нет новых постов</string>
+			<key>other</key>
+			<string>%d новых поста</string>
+			<key>one</key>
+			<string>%d новый пост</string>
+			<key>many</key>
+			<string>%d новых постов</string>
+		</dict>
+	</dict>
+	<key>%d attachments</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@attachments@</string>
+		<key>attachments</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>one</key>
+			<string>%d вложение</string>
+			<key>other</key>
+			<string>%d вложения</string>
+			<key>many</key>
+			<string>%d вложений</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
