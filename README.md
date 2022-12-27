@@ -29,7 +29,8 @@ make it public.
 * Works on iOS 14+
 
 ## How to install
-Download the [.ipa file](#) and install it using your preferred method, like AltStore, Sideloadly or TrollStore.
+Download the [.ipa file](https://github.com/TheChanDev/TheChan/releases/latest)
+and install it using your preferred method, like AltStore, Sideloadly or TrollStore.
 
 ## How to build
 1. Install the latest version of Xcode (tested with Xcode 14.1)
