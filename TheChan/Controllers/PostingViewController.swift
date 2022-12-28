@@ -198,7 +198,11 @@ class PostingViewController:
         isCapchaErrorHidden = true
         isCaptchaHidden = true
         captchaActivityIndicator.startAnimating()
-        loadCaptcha()
+        loadCaptcha { [weak self] _, error in
+            if case .authorizationRequired(let url) = error {
+                self?.performAuthorization(url: url)
+            }
+        }
     }
 
     @IBAction func emailChanged(_ sender: UITextField) {
@@ -266,8 +270,24 @@ class PostingViewController:
 
             self.sendButton.isEnabled = true
             if !isSuccessful {
-                let error = error ?? NSLocalizedString("UNKNOWN_ERROR", comment: "Unknown error")
-                let alert = UIAlertController(title: String(key: "ERROR"), message: error, preferredStyle: .alert)
+                let errorMessage: String
+                switch error {
+                case .authorizationRequired(let url):
+                    self.performAuthorization(url: url)
+                    return
+                case .http(let code):
+                    errorMessage = "HTTP \(code)"
+                case .other(let message):
+                    errorMessage = message
+                case .unknown, .none:
+                    errorMessage = String(key: "UNKNOWN_ERROR")
+                }
+
+                let alert = UIAlertController(
+                    title: String(key: "ERROR"),
+                    message: errorMessage,
+                    preferredStyle: .alert
+                )
                 alert.addAction(UIAlertAction(title: "OK", style: .default))
                 self.present(alert, animated: true)
             } else if case .reply = self.mode {
@@ -490,6 +510,14 @@ class PostingViewController:
         }
     }
 
+    private func performAuthorization(url: URL) {
+        let controller = AuthorizationViewController(url: url)
+        controller.delegate = self
+        let navigation = UINavigationController(rootViewController: controller)
+        navigation.modalPresentationStyle = .popover
+        present(navigation, animated: true)
+    }
+
     private func applyCaptcha(_ captcha: Captcha?, error: CaptchaError?) {
         self.captcha = captcha
         captchaActivityIndicator.stopAnimating()
@@ -516,7 +544,20 @@ class PostingViewController:
         guard let url = imageCaptcha.imageURL else { return }
         captchaField.text = ""
         isCaptchaHidden = false
-        captchaImageView.kf.setImage(with: url)
+        captchaImageView.kf.setImage(
+            with: url,
+            options: [.requestModifier(CookieImageRequestModifier())]
+        ) { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .failure(.responseError(reason: .invalidHTTPStatusCode(let r))) where r.statusCode == 503:
+                self.performAuthorization(
+                    url: URL(string: self.chan.linkCoder.getURL(for: BoardLink(id: self.boardId)))!
+                )
+            default:
+                return
+            }
+        }
     }
 
     private func addUserPost(number: Int) {
@@ -547,5 +588,32 @@ class PostingViewController:
         } else {
             attachButton.isEnabled = true
         }
+    }
+}
+
+extension PostingViewController: AuthorizationViewControllerDelegate {
+    func authorizationViewControllerDelegateDidCompleteAuthorization(_ controller: AuthorizationViewController) {
+        controller.dismiss(animated: true)
+    }
+}
+
+private struct CookieImageRequestModifier: ImageDownloadRequestModifier {
+    func modified(for request: URLRequest) -> URLRequest? {
+        guard let url = request.url,
+              let cookies = HTTPCookieStorage.shared.cookies(for: url)
+        else { return request }
+        var request = request
+        request.allHTTPHeaderFields = HTTPCookie.requestHeaderFields(with: cookies)
+        request.setValue(
+            "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            forHTTPHeaderField: "Accept"
+        )
+
+        request.setValue(
+            "Mozilla/5.0 (iPhone; CPU iPhone OS 16_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148",
+            forHTTPHeaderField: "User-Agent"
+        )
+
+        return request
     }
 }

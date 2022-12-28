@@ -57,3 +57,4 @@ CAPTCHA="Капча";
 CAPTCHA_LOAD_ERROR="Ошибка при загрузке капчи";
 CAPTCHA_LOAD_ERROR_WITH_HELP_MESSAGE="Ошибка при загрузке капчи (%@)";
 POSTING_ERROR_COOLDOWN="%@s кулдаун";
+AUTHORIZATION="Авторизация";

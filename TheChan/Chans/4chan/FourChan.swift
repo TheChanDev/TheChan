@@ -62,40 +62,12 @@ class FourChan: Chan {
 
     func getCaptcha(boardId: String, threadNumber: Int?, onComplete: @escaping (Captcha?, CaptchaError?) -> Void) {
         onComplete(SliderCaptcha(key: "", board: boardId, threadNumber: threadNumber), nil)
-//        var url = "https://sys.4chan.org/captcha?board=\(boardId)"
-//        if let threadNumber {
-//            url += "&thread_id=\(threadNumber)"
-//        }
-//
-//        let headers: HTTPHeaders = [
-//            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-//            "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148",
-//            "Referer": url,
-//        ]
-//
-//        getAndMapDictionary(
-//            url,
-//            headers: headers,
-//            mapping: mapper.map(sliderCaptcha:),
-//            errorMapping: { response, code in
-//                if let cooldown = response?["cd"] as? Int {
-//                    return CaptchaError.cooldown(seconds: cooldown)
-//                } else if let error = response?["error"] as? String {
-//                    return CaptchaError.other(error)
-//                } else if code == 503 {
-//                    return CaptchaError.authorizationRequired(URL(string: url)!)
-//                } else {
-//                    return CaptchaError.invalidResponse
-//                }
-//            },
-//            onComplete: onComplete
-//        )
     }
 
-    func send(post: PostingData, onComplete: @escaping (Bool, String?, Int?) -> Void) {
+    func send(post: PostingData, onComplete: @escaping (Bool, PostingError?, Int?) -> Void) {
         let url = "https://sys.4chan.org/\(post.boardId)/post"
         let data = mapper.map(postingData: post)
-        Alamofire.upload(multipartFormData: { formData in
+        AlamofireManager.instance.upload(multipartFormData: { formData in
             for (key, value) in data {
                 formData.append(value.data(using: .utf8)!, withName: key)
             }
@@ -108,14 +80,14 @@ class FourChan: Chan {
             case .success(let request, _, _):
                 request.responseString { response in
                     if let result = response.result.value {
-                        let (isSuccess, message, num) = self.mapper.map(postingResult: result)
-                        onComplete(isSuccess, message, num)
+                        let (isSuccess, error, num) = self.mapper.map(postingResult: result)
+                        onComplete(isSuccess, error, num)
                     } else {
-                        onComplete(false, String(response.response?.statusCode ?? 404), nil)
+                        onComplete(false, response.response.flatMap { .http($0.statusCode) } ?? .unknown, nil)
                     }
                 }
             default:
-                onComplete(false, nil, nil)
+                onComplete(false, .unknown, nil)
             }
         }
     }

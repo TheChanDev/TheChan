@@ -58,3 +58,4 @@ CAPTCHA="Captcha";
 CAPTCHA_LOAD_ERROR="Unable to load captcha";
 CAPTCHA_LOAD_ERROR_WITH_HELP_MESSAGE="Unable to load captcha (%@)";
 POSTING_ERROR_COOLDOWN="%@s cooldown";
+AUTHORIZATION="Authorization";

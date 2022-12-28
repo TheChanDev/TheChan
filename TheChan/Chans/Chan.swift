@@ -19,7 +19,7 @@ protocol Chan: AnyObject {
     func loadThread(boardId: String, number: Int, from: Int?, onComplete: @escaping ([Post]?, String?) -> Void)
     func isCaptchaEnabled(in board: String, forCreatingThread: Bool, onComplete: @escaping (Bool) -> Void)
     func getCaptcha(boardId: String, threadNumber: Int?, onComplete: @escaping (Captcha?, CaptchaError?) -> Void)
-    func send(post: PostingData, onComplete: @escaping (Bool, String?, Int?) -> Void)
+    func send(post: PostingData, onComplete: @escaping (Bool, PostingError?, Int?) -> Void)
 
     func getMarkupParser(for html: String, theme: Theme, userInterfaceStyle: UIUserInterfaceStyle) -> MarkupParser?
 }
@@ -123,6 +123,13 @@ enum CaptchaError {
     }
 }
 
+enum PostingError {
+    case authorizationRequired(URL)
+    case http(Int)
+    case other(String)
+    case unknown
+}
+
 class AlamofireManager: SessionManager {
     // MARK: Lifecycle
 
@@ -137,6 +144,60 @@ class AlamofireManager: SessionManager {
     // MARK: Internal
 
     static let instance = AlamofireManager()
+
+    override func request(
+        _ url: URLConvertible,
+        method: HTTPMethod = .get,
+        parameters: Parameters? = nil,
+        encoding: ParameterEncoding = URLEncoding.default,
+        headers: HTTPHeaders? = nil
+    ) -> DataRequest {
+        super.request(
+            url,
+            method: method,
+            parameters: parameters,
+            encoding: encoding,
+            headers: self.headers(for: url).merging(headers ?? [:], uniquingKeysWith: { h, _ in h })
+        )
+    }
+
+    override func upload(
+        multipartFormData: @escaping (MultipartFormData) -> Void,
+        usingThreshold encodingMemoryThreshold: UInt64 = SessionManager.multipartFormDataEncodingMemoryThreshold,
+        to url: URLConvertible,
+        method: HTTPMethod = .post,
+        headers: HTTPHeaders? = nil,
+        queue: DispatchQueue? = nil,
+        encodingCompletion: ((SessionManager.MultipartFormDataEncodingResult) -> Void)?
+    ) {
+        super.upload(
+            multipartFormData: multipartFormData,
+            usingThreshold: encodingMemoryThreshold,
+            to: url,
+            method: method,
+            headers: self.headers(for: url).merging(headers ?? [:], uniquingKeysWith: { h, _ in h }),
+            queue: queue,
+            encodingCompletion: encodingCompletion
+        )
+    }
+
+    func headers(for url: URLConvertible) -> HTTPHeaders {
+        var resultHeaders = [
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_1 like Mac OS X)" +
+                " AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148",
+        ]
+
+        guard let url = try? url.asURL(),
+              let cookies = HTTPCookieStorage.shared.cookies(for: url)
+        else { return resultHeaders }
+
+        HTTPCookie.requestHeaderFields(with: cookies).forEach { name, value in
+            resultHeaders[name] = value
+        }
+
+        return resultHeaders
+    }
 
     // MARK: Private
 

@@ -151,10 +151,15 @@ class DvachMapper {
             "name": post.name,
         ]
 
-        if post.captchaResult != nil {
-            dict["captcha_type"] = "2chcaptcha"
-            dict["2chcaptcha_id"] = post.captchaResult!.captcha.key
-            dict["2chcaptcha_value"] = post.captchaResult!.input
+        if let capthaResult = post.captchaResult {
+            if capthaResult.captcha is ImageCaptcha {
+                dict["captcha_type"] = "2chcaptcha"
+                dict["2chcaptcha_id"] = capthaResult.captcha.key
+                dict["2chcaptcha_value"] = capthaResult.input
+            } else if capthaResult.captcha is ReCaptcha {
+                dict["captcha_type"] = "recaptcha"
+                dict["g-recaptcha-response"] = capthaResult.input
+            }
         }
 
         return dict

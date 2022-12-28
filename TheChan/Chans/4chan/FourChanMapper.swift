@@ -148,13 +148,13 @@ class FourChanMapper {
         return dict
     }
 
-    func map(postingResult result: String) -> (Bool, String?, Int?) {
+    func map(postingResult result: String) -> (Bool, PostingError?, Int?) {
         let string = result as NSString
         let range = NSMakeRange(0, string.length)
         if let errorMatch = errorRegex.firstMatch(in: result, options: [], range: range) {
             let messageRange = errorMatch.range(at: 1)
             let message = string.substring(with: messageRange)
-            return (false, message, nil)
+            return (false, .other(message), nil)
         } else if let successMatch = successRegex.firstMatch(in: result, options: [], range: range) {
             let numberRange = successMatch.range(at: 2)
             let number = string.substring(with: numberRange)
@@ -163,7 +163,7 @@ class FourChanMapper {
             }
         }
 
-        return (false, "Unable to parse response", nil)
+        return (false, .unknown, nil)
     }
 
     // MARK: Private

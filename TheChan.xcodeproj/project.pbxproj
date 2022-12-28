@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B986A1D295C56FC0064BD02 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B986A1C295C56FC0064BD02 /* AuthorizationViewController.swift */; };
 		4BAD73122957130200039B42 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAD73112957130200039B42 /* Theme.swift */; };
 		4BAD73142957132600039B42 /* Themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAD73132957132600039B42 /* Themes.swift */; };
 		4BAD73162957136A00039B42 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAD73152957136A00039B42 /* ThemeManager.swift */; };
@@ -135,6 +136,7 @@
 
 /* Begin PBXFileReference section */
 		2CFE6C7DCB3189918F28A90F /* Pods-TheChan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheChan.release.xcconfig"; path = "Pods/Target Support Files/Pods-TheChan/Pods-TheChan.release.xcconfig"; sourceTree = "<group>"; };
+		4B986A1C295C56FC0064BD02 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		4BAD73112957130200039B42 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		4BAD73132957132600039B42 /* Themes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themes.swift; sourceTree = "<group>"; };
 		4BAD73152957136A00039B42 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
@@ -483,6 +485,7 @@
 				92ED146B1DDB83150009D8EC /* PostingViewController.swift */,
 				4BAD73252958F11800039B42 /* CaptchaViewController.swift */,
 				9290AA851E61EDF4009F59AB /* WebViewCaptchaViewController.swift */,
+				4B986A1C295C56FC0064BD02 /* AuthorizationViewController.swift */,
 				922751A11DE9D66F000D905D /* RecentThreadsTableViewController.swift */,
 				927A58101DEB035B00CEBDA0 /* RepliesTableViewController.swift */,
 				92269B4B1DCF4EAC001235E9 /* ThreadStateViewController.swift */,
@@ -779,6 +782,7 @@
 				92228C861E1000BB00C3D98C /* DvachLinkCoder.swift in Sources */,
 				92269B4D1DCF4EAC001235E9 /* ThreadStateViewController.swift in Sources */,
 				4BAD731E2957A53600039B42 /* SceneDelegate.swift in Sources */,
+				4B986A1D295C56FC0064BD02 /* AuthorizationViewController.swift in Sources */,
 				925BDBED1DEACFD100A098BA /* StringExtensions.swift in Sources */,
 				92DD31D220C2F6F100B53B2C /* User.swift in Sources */,
 				92694B791E37A896007964D1 /* AddCustomBoardViewController.swift in Sources */,
