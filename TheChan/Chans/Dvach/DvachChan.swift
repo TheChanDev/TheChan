@@ -160,10 +160,10 @@ class Dvach: Chan {
                 formData.append(value.data(using: .utf8)!, withName: key)
             }
 
-            for (index, attachment) in post.attachments.enumerated() {
+            for attachment in post.attachments {
                 formData.append(
                     attachment.data,
-                    withName: "image\(index)",
+                    withName: "file[]",
                     fileName: attachment.name,
                     mimeType: attachment.mimeType
                 )
